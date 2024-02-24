@@ -1,0 +1,41 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    gap: 10px;
+    text-align: center;
+}
+
+
+.highlight {
+    color: var(--accent);
+}
+
+
+.progressBar {
+    position: relative;
+    height: 10px;
+    border-radius: 100px;
+    background-color: white;
+    width: 100%;
+}
+
+.progress {
+    position: absolute;
+    background-color: var(--accent);
+    height: 10px;
+    border-radius: 100px;
+    animation: fillProgress 0.5s linear;
+}
+
+@keyframes fillProgress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: calc(width);
+    }
+}

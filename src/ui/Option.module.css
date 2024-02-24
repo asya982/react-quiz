@@ -1,0 +1,25 @@
+.optionContainer {
+    padding: 21px 20px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.optionContainer:hover {
+    background-color: white;
+    color: var(--primary);
+}
+
+.optionContainer:focus {
+    border: 2px solid var(--primary);
+}
+
+.bubble {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    border-radius: 50%;
+    width: fit-content;
+}

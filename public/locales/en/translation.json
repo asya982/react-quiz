@@ -1,0 +1,48 @@
+{
+  "questions": {
+    "language": "What is your preferred language?",
+    "gender": "What gender do you identify with?",
+    "age": "What is your age?",
+    "hate_in_book": "What do you hate the most in a book?",
+    "fav_topics": "What are your favorite topics?"
+  },
+
+  "comments": {
+    "language": "Choose language",
+    "gender": "Please share how do you identify yourself",
+    "fav_topics": "Choose up to 3 topics you like"
+  },
+
+  "answers": {
+    "en": "English",
+    "de": "German",
+    "fr": "French",
+    "es": "Spanish",
+    "female": "Female",
+    "male": "Male",
+    "other": "Other",
+    "18": "18-29 years",
+    "30": "30-39 years",
+    "40": "40-49 years",
+    "50": "50+",
+    "logic": "Lack of logic",
+    "humor": "Lack of humor",
+    "speed": "A slow speed",
+    "ending": "Way too generic ending"
+  },
+
+  "after_quiz": {
+    "loader": "Finding collections for you...",
+    "email": "Email",
+    "email_comment": "Enter your email to get full access",
+    "your_email": "Your email",
+    "next": "Next",
+    "download_answers": "Download my answers",
+    "retake": "Retake quiz",
+    "thank_you": "Thank you for supporting us and passing quiz"
+  },
+
+  "topic": {
+
+  }
+}

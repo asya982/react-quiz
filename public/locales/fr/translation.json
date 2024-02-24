@@ -1,0 +1,44 @@
+{
+  "questions": {
+    "language": "Quelle est votre langue préférée?",
+    "gender": "À quel genre vous identifiez-vous?",
+    "age": "Quel âge avez-vous?",
+    "hate_in_book": "Qu’est-ce que tu détestes le plus dans un livre?",
+    "fav_topics": "Quels sont vos sujets favoris?"
+  },
+
+  "comments": {
+    "language": "Choisir la langue",
+    "gender": "Veuillez partager comment vous identifiez-vous",
+    "fav_topics": "Choisissez jusqu'à 3 sujets que vous aimez"
+  },
+
+  "answers": {
+    "en": "Anglais",
+    "de": "Allemand",
+    "fr": "Français",
+    "es": "Espagnol",
+    "female": "Femme",
+    "male": "Mâle",
+    "other": "Autre",
+    "18": "18-29 ans",
+    "30": "30-39 ans",
+    "40": "40-49 ans",
+    "50": "50+",
+    "logic": "Manque de logique",
+    "humor": "Manque d'humour",
+    "speed": "Une vitesse lente",
+    "ending": "Fin beaucoup trop générique"
+  },
+
+  "after_quiz": {
+    "loader": "Trouver des collections pour vous...",
+    "email": "E-mail",
+    "email_comment": "Entrez votre email pour obtenir un accès complet",
+    "your_email": "Votre email",
+    "next": "Suivant",
+    "download_answers": "Télécharger mes réponses",
+    "retake": "Reprendre le quiz",
+    "thank_you": "Merci de nous soutenir et de réussir le quiz"
+  }
+}

@@ -1,0 +1,21 @@
+.quizPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.title p {
+    color: #C4C8CC;
+}
+
+.basicList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
