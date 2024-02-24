@@ -12,15 +12,14 @@ const FinishPage: FC = () => {
     const timeoutId = setTimeout(() => {
       navigate("/email");
     }, 5000);
-
     return () => clearTimeout(timeoutId);
   }, [navigate]);
 
   return (
-    <>
+    <div className="container">
       <Loader />
       <p>{t("after_quiz.loader")}</p>
-    </>
+    </div>
   );
 };
 

@@ -16,13 +16,20 @@ const ThankYouPage: FC = () => {
     quizAPI.clearAnswers();
     navigate("/");
   };
+
+  const csvData = [
+    ["Order", "Title", "Type", "Answer"],
+    ...quizAPI.getUserAnswers(),
+  ];
+
   return (
     <>
       <h2></h2>
       <img src={checkmark} alt="checkmark icon" />
       <div className={styles.download}>
-        <img src={download} alt="download icon" />{" "}
-        <p>{t("after_quiz.download_answers")}</p>
+       
+          <img src={download} alt="download icon" />{" "}
+          <p>{t("after_quiz.download_answers")}</p>
       </div>
       <button onClick={handleRetakeQuiz}>{t("after_quiz.retake")}</button>
     </>

@@ -4,6 +4,8 @@
     color: white;
     border-radius: 15px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 
 .optionContainer:hover {
@@ -11,15 +13,25 @@
     color: var(--primary);
 }
 
-.optionContainer:focus {
-    border: 2px solid var(--primary);
-}
-
 .bubble {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    align-items: center;
     border-radius: 50%;
-    width: fit-content;
+    width: 88px;
+    height: 88px;
+    justify-content: space-evenly;
+    padding: 10px;
+    border: 2px solid transparent;
 }
+
+.bubble p {
+    font-size: x-small;
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.selected {
+    border: 2px solid var(--accent);
+}
+

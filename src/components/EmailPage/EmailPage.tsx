@@ -25,7 +25,7 @@ const EmailPage: FC = () => {
         value={email}
         onChange={handleEmailChange}
         placeholder={t("after_quiz.your_email")}
-        valid={false}
+        valid={valid}
       />
       <Trans>
         <p></p>

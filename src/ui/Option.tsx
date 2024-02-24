@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useState } from "react";
 import styles from "./Option.module.css";
 import Emoji from "./Emoji";
 
@@ -10,6 +10,7 @@ type OptionProps = {
 
 type BubbleOptions = OptionProps & {
   emoji: string;
+  disabled?: boolean;
 };
 
 export const Option: FC<OptionProps> = ({
@@ -17,19 +18,41 @@ export const Option: FC<OptionProps> = ({
   multiselect = false,
   onSelect,
 }) => {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked((prev) => !prev);
+    onSelect();
+  };
+
   return (
-    <div className={styles.optionContainer} onClick={onSelect}>
+    <div className={styles.optionContainer} onClick={handleClick}>
       {value}
-      {multiselect && <button></button>}
+      {multiselect && <input type="checkbox" checked={clicked} />}
     </div>
   );
 };
 
-export const BubbleOption: FC<BubbleOptions> = ({ value, emoji, onSelect }) => {
+export const BubbleOption: FC<BubbleOptions> = ({
+  value,
+  emoji,
+  onSelect,
+  disabled = false,
+}) => {
+  const [clicked, setClicked] = useState(false);
+  const handleClick = () => {
+    onSelect();
+    if (!disabled || clicked) {
+      setClicked((prev) => !prev);
+    }
+  };
+
   return (
     <div
-      className={`${styles.optionContainer} ${styles.bubble}`}
-      onClick={onSelect}
+      className={`${styles.optionContainer} ${styles.bubble} ${
+        clicked ? styles.selected : ""
+      }`}
+      onClick={handleClick}
     >
       <Emoji symbol={emoji} />
       <p>{value}</p>

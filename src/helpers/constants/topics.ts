@@ -2,7 +2,7 @@ import { TopicListType } from "../../types/topics";
 
 export const topics: TopicListType = {
   "18": [
-    { emoji: "📚", value: "Young Adult Fiction", id: "young_adult_fiction" },
+    { emoji: "📚", value: "Young Adult", id: "young_adult" },
     { emoji: "🎮", value: "Video Games", id: "video_games" },
     { emoji: "🎵", value: "Music", id: "music" },
     { emoji: "💻", value: "Technology", id: "technology" },

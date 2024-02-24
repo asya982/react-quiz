@@ -23,7 +23,10 @@ const BasicPage: FC<BasicPageProps> = ({ onSelectHandler, question }) => {
         <Option
           value={t(`answers.${answer}`)}
           onSelect={() =>
-            onSelectHandler({ questionId: question.id, value: answer })
+            onSelectHandler({
+              questionId: question.id,
+              value: answer,
+            })
           }
           key={`option-${key}`}
         />

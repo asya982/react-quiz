@@ -4,6 +4,7 @@
     justify-content: space-around;
     align-items: stretch;
     gap: 20px;
+    height: 100%;
 }
 
 .title {
@@ -18,4 +19,38 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+
+.bubbleContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    overflow-x: scroll;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    height: 250px;
+}
+
+.bubbleContainer div:nth-child(odd) {
+    transform: translateY(10px);
+}
+
+.bubbleContainer div:nth-child(even) {
+    transform: translateY(-10px);
+}
+
+.backBtn {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+}
+
+.backBtn:hover{
+    stroke: var(--accent);
+}
+
+.progressContainer{
+    position: relative;
 }

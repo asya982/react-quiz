@@ -6,7 +6,7 @@
     "hate_in_book": "¿Qué es lo que más odias en un libro?",
     "fav_topics": "¿Cuales son tus temas favoritos?"
   },
-  
+
   "comments": {
     "language": "Elegir idioma",
     "gender": "Por favor comparte cómo te identificas",
@@ -40,5 +40,28 @@
     "download_answers": "Descargar mis respuestas",
     "retake": "Retomar el examen",
     "thank_you": "Gracias por apoyarnos y aprobar el cuestionario"
+  },
+
+  "topic": {
+    "young_adult": "Adulto Joven",
+    "video_games": "Videojuegos",
+    "music": "Música",
+    "technology": "Tecnología",
+    "art": "Arte",
+    "self_help": "Autoayuda",
+    "cooking": "Cocinar",
+    "career_development": "Desarrollo profesional",
+    "finance": "Finanzas",
+    "personal_growth": "Crecimiento personal",
+    "parenting": "Paternidad",
+    "fitness": "Fitness",
+    "inverting": "Invertir",
+    "mindfulness": "Atención plena",
+    "goal_setting": "Establecimiento de objetivos",
+    "retirement_planning": "Planificación de la jubilación",
+    "health_wellness": "Salud y Bienestar",
+    "current_events": "Eventos Actuales",
+    "gardening": "Jardinería",
+    "hobbies": "aficiones"
   }
 }

@@ -40,5 +40,28 @@
     "download_answers": "Télécharger mes réponses",
     "retake": "Reprendre le quiz",
     "thank_you": "Merci de nous soutenir et de réussir le quiz"
+  },
+
+  "topic": {
+    "young_adult": "Jeune adulte",
+    "video_games": "Jeux vidéo",
+    "music": "Musique",
+    "technology": "Technologie",
+    "art": "art",
+    "self_help": "Auto-assistance",
+    "cooking": "Cuisine",
+    "career_development": "Développement de carrière",
+    "finances": "Finances",
+    "personal_growth": "Croissance personnelle",
+    "parenting": "Parentalité",
+    "fitness": "Fitness",
+    "investing": "Investir",
+    "mindfulness": "Pleine conscience",
+    "goal_setting": "Définition d'un objectif",
+    "retirement_planning": "Planification de la retraite",
+    "health_wellness": "Santé et bien-être",
+    "current_events": "Événements actuels",
+    "gardening": "Jardinage",
+    "hobbies": "Loisirs"
   }
 }

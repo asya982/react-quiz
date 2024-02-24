@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 
 import { quizAPI } from "../../API/quiz";
 
-import ProgressBar from "../../ui/ProgressBar";
 import BasicPage from "./components/BasicPage";
 
 import { AnswerType } from "../../types/quiz";
@@ -12,6 +11,8 @@ import { AnswerType } from "../../types/quiz";
 import styles from "./QuizPage.module.css";
 
 import BubbleSelect from "./components/BubbleSelect";
+import MultipleSelect from "./components/MultipleSelect";
+import QuizProgress from "./components/QuizProgress";
 
 const QuizPage: FC = () => {
   const { questionId } = useParams();
@@ -24,7 +25,7 @@ const QuizPage: FC = () => {
 
   const baseSaving = (answer: AnswerType) => {
     quizAPI.saveAnswer(answer);
-    const pageNumber = answer.questionId+1;
+    const pageNumber = answer.questionId + 1;
     const nextPage =
       allQuestions.length < pageNumber ? "/finish" : `/quiz/${pageNumber}`;
 
@@ -47,8 +48,20 @@ const QuizPage: FC = () => {
             onSelectHandler={languageChange}
           />
         );
+      case 4:
+        return (
+          <MultipleSelect
+            question={currentQuestion}
+            onSelectHandler={baseSaving}
+          />
+        );
       case 5:
-        return <BubbleSelect />;
+        return (
+          <BubbleSelect
+            onSelectHandler={baseSaving}
+            question={currentQuestion}
+          />
+        );
 
       default:
         return (
@@ -63,15 +76,7 @@ const QuizPage: FC = () => {
 
   return (
     <section className={styles.quizPage}>
-      <div>
-        {Number(currentQuestion?.id) > 1 && (
-          <button onClick={() => navigate(-1)}>Back</button>
-        )}
-        <ProgressBar
-          totalCount={allQuestions.length}
-          currentProgress={currentQuestion?.id}
-        />
-      </div>
+      <QuizProgress questionId={currentQuestion?.id} totalQuestionsCount={allQuestions.length}/>
       <div className={styles.title}>
         <h2>{t(`questions.${currentQuestion?.question}`)}</h2>
         {currentQuestion?.comment && (

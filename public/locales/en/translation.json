@@ -43,6 +43,25 @@
   },
 
   "topic": {
-
+    "young_adult": "Young Adult",
+    "video_games": "Video Games",
+    "music": "Music",
+    "technology": "Technology",
+    "art": "Art",
+    "self_help": "Self-Help",
+    "cooking": "Cooking",
+    "career_development": "Career Development",
+    "finance": "Finance",
+    "personal_growth": "Personal Growth",
+    "parenting": "Parenting",
+    "fitness": "Fitness",
+    "investing": "Investing",
+    "mindfulness": "Mindfulness",
+    "goal_setting": "Goal Setting",
+    "retirement_planning": "Retirement Planning",
+    "health_wellness": "Health & Wellness",
+    "current_events": "Current Events",
+    "gardening": "Gardening",
+    "hobbies": "Hobbies"
   }
 }
