@@ -40,7 +40,7 @@ const BasicPage: FC<BasicPageProps> = ({
         optionsWithImage ? styles.emojiLayout : ""
       }`}
     >
-      {question.variants.map((answer, key) => (
+      {question.variants.map((answer) => (
         <Option
           value={optionsPrepare(t(`answers.${answer.value}`), answer?.emoji)}
           onSelect={() =>
@@ -49,7 +49,7 @@ const BasicPage: FC<BasicPageProps> = ({
               value: answer.value,
             })
           }
-          key={`option-${key}`}
+          key={`option-${question.id}-${answer.value}`}
         />
       ))}
     </div>
