@@ -21,6 +21,21 @@
     gap: 10px;
 }
 
+.emojiLayout {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.emojiOption {
+    display: flex;
+    flex-direction: column;
+    min-width: 4rem;
+}
+
+.emojiOption span {
+    font-size: 2rem;
+}
 
 .bubbleContainer {
     display: grid;
@@ -47,10 +62,10 @@
     left: 0;
 }
 
-.backBtn:hover{
+.backBtn:hover {
     stroke: var(--accent);
 }
 
-.progressContainer{
+.progressContainer {
     position: relative;
 }

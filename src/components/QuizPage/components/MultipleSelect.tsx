@@ -35,8 +35,8 @@ const MultipleSelect: FC<OptionsGroupProps> = ({
       <div className={styles.basicList}>
         {question.variants.map((answer, key) => (
           <Option
-            value={t(`answers.${answer}`)}
-            onSelect={() => handleSelect(t(`answers.${answer}`))}
+            value={t(`answers.${answer.value}`)}
+            onSelect={() => handleSelect(answer.value)}
             key={`option-${key}`}
             multiselect
           />

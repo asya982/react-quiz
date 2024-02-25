@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 * {
   box-sizing: border-box;
   --primary: #3b393c;
@@ -54,4 +56,9 @@ button {
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
+}
+
+.highlight {
+  color: var(--accent);
+  font-weight: bold;
 }

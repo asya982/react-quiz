@@ -14,7 +14,7 @@ const ProgressBar: FC<ProgressBarProps> = ({
   return (
     <section className={styles.container}>
       <p>
-        <span className={styles.highlight}>{currentProgress}</span>/{totalCount}
+        <span className="highlight">{currentProgress}</span>/{totalCount}
       </p>
       <div className={styles.progressBar}>
         <div

@@ -3,7 +3,7 @@
     "language": "¿Cuál es tu idioma preferido?",
     "gender": "¿Con qué género te identificas?",
     "age": "¿Cuál es tu edad?",
-    "hate_in_book": "¿Qué es lo que más odias en un libro?",
+    "hate_in_book": "¿Qué es lo que más <em>odias</em> en un libro?",
     "fav_topics": "¿Cuales son tus temas favoritos?"
   },
 
@@ -36,10 +36,13 @@
     "email": "Correo electrónico",
     "email_comment": "Ingrese su correo electrónico para obtener acceso completo",
     "your_email": "Tu correo electrónico",
+    "invalid_email": "¡El correo electrónico no es válido!",
     "next": "Siguiente",
     "download_answers": "Descargar mis respuestas",
     "retake": "Retomar el examen",
-    "thank_you": "Gracias por apoyarnos y aprobar el cuestionario"
+    "thank_you": "Gracias",
+    "thank_you_comment": "por apoyarnos y aprobar el cuestionario",
+    "privacy": "Al continuar, acepto la <a>Política de privacidad</a> y los <b>Términos de uso</b>"
   },
 
   "topic": {

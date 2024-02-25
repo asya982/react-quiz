@@ -3,7 +3,7 @@
     "language": "Quelle est votre langue préférée?",
     "gender": "À quel genre vous identifiez-vous?",
     "age": "Quel âge avez-vous?",
-    "hate_in_book": "Qu’est-ce que tu détestes le plus dans un livre?",
+    "hate_in_book": "Qu’est-ce que tu <em>détestes</em> le plus dans un livre?",
     "fav_topics": "Quels sont vos sujets favoris?"
   },
 
@@ -36,10 +36,13 @@
     "email": "E-mail",
     "email_comment": "Entrez votre email pour obtenir un accès complet",
     "your_email": "Votre email",
+    "invalid_email": "L'e-mail n'est pas valide !",
     "next": "Suivant",
     "download_answers": "Télécharger mes réponses",
     "retake": "Reprendre le quiz",
-    "thank_you": "Merci de nous soutenir et de réussir le quiz"
+    "thank_you": "Merci",
+    "thank_you_comment": "de nous soutenir et de réussir le quiz",
+    "privacy": "En continuant, j'accepte la <a>Politique de confidentialité</a> et les <b>Conditions d'utilisation</b>."
   },
 
   "topic": {

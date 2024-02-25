@@ -1,7 +1,7 @@
 export type QuizType = {
   id: number;
   question: string;
-  variants: string[];
+  variants: { value: string; emoji?: string }[];
   comment: boolean;
   type: "single-select" | "single-select-image" | "bubble" | "multiple-select";
 };

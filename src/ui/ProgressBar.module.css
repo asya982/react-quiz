@@ -8,12 +8,6 @@
     text-align: center;
 }
 
-
-.highlight {
-    color: var(--accent);
-}
-
-
 .progressBar {
     position: relative;
     height: 10px;

@@ -3,7 +3,7 @@
     "language": "What is your preferred language?",
     "gender": "What gender do you identify with?",
     "age": "What is your age?",
-    "hate_in_book": "What do you hate the most in a book?",
+    "hate_in_book": "What do you <em>hate</em> the most in a book?",
     "fav_topics": "What are your favorite topics?"
   },
 
@@ -36,10 +36,13 @@
     "email": "Email",
     "email_comment": "Enter your email to get full access",
     "your_email": "Your email",
+    "invalid_email": "Email is invalid!",
     "next": "Next",
     "download_answers": "Download my answers",
     "retake": "Retake quiz",
-    "thank_you": "Thank you for supporting us and passing quiz"
+    "thank_you": "Thank you",
+    "thank_you_comment": "for supporting us and passing quiz",
+    "privacy": "By continuing I agree with <a>Privacy policy</a> and <b>Terms of use</b>."
   },
 
   "topic": {

@@ -1,6 +1,6 @@
 import { FC, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { quizAPI } from "../../API/quiz";
 
@@ -65,7 +65,11 @@ const QuizPage: FC = () => {
 
       default:
         return (
-          <BasicPage question={currentQuestion} onSelectHandler={baseSaving} />
+          <BasicPage
+            question={currentQuestion}
+            onSelectHandler={baseSaving}
+            optionsWithImage={currentQuestion.type === "single-select-image"}
+          />
         );
     }
   };
@@ -76,9 +80,18 @@ const QuizPage: FC = () => {
 
   return (
     <section className={styles.quizPage}>
-      <QuizProgress questionId={currentQuestion?.id} totalQuestionsCount={allQuestions.length}/>
+      <QuizProgress
+        questionId={currentQuestion?.id}
+        totalQuestionsCount={allQuestions.length}
+      />
       <div className={styles.title}>
-        <h2>{t(`questions.${currentQuestion?.question}`)}</h2>
+        <h2>
+          <Trans
+            components={{ em: <span className="highlight" /> }}
+            i18nKey={`questions.${currentQuestion?.question}`}
+          />
+        </h2>
+
         {currentQuestion?.comment && (
           <p>{t(`comments.${currentQuestion.question}`)}</p>
         )}

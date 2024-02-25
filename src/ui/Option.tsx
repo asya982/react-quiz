@@ -25,10 +25,22 @@ export const Option: FC<OptionProps> = ({
     onSelect();
   };
 
+  const checkedCss = clicked ? styles.checked : "";
+
   return (
-    <div className={styles.optionContainer} onClick={handleClick}>
+    <div
+      className={`${styles.optionContainer} ${checkedCss}`}
+      onClick={handleClick}
+    >
       {value}
-      {multiselect && <input type="checkbox" checked={clicked} />}
+      {multiselect && (
+        <label
+          className={`${styles.checkbox} ${checkedCss}`}
+          htmlFor="checkbox"
+        >
+          <input id="checkbox" type="checkbox" checked={clicked} readOnly />
+        </label>
+      )}
     </div>
   );
 };

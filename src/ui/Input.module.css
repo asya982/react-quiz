@@ -16,5 +16,16 @@
 }
 
 .invalid {
-    border: 2px solid #D0006E;
+    border-color: #D0006E;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input p {
+    color: #D0006E;
+    text-align: left;
 }

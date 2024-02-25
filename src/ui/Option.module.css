@@ -6,11 +6,7 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-}
-
-.optionContainer:hover {
-    background-color: white;
-    color: var(--primary);
+    border: 3px solid transparent;
 }
 
 .bubble {
@@ -35,3 +31,32 @@
     border: 2px solid var(--accent);
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkbox.checked {
+    background-color: var(--accent);
+}
+
+.checkbox.checked::after {
+    content: '✓';
+    font-size: 14px; /* Adjust font size as needed */
+    color: white; /* Adjust color as needed */
+}
+
+.optionContainer.checked {
+    border-color: var(--accent);
+    background-color: #E4229B33;
+}

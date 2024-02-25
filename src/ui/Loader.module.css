@@ -1,28 +1,22 @@
-.progressContainer {
-    position: relative;
-    width: 250px;
-  }
-  
-  .progressRing {
-    transform: rotate(-90deg);
-  }
-  
-  .progressRingCircle {
-    stroke: #ddd;
-  }
-  
-  .progressRingCircle:last-child {
-    stroke: var(--accent);
-    stroke-linecap: round;
-    stroke-dasharray: 283;
-    transition: stroke-dashoffset 0.3s;
-  }
-  
-  .progressText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-  }
-  
+.circularProgress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.progressRing {
+  width: 300px;
+  height: 300px;
+}
+
+.progressRingCircle {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+
+.progressText {
+  font-size: 20px;
+  fill: white;
+}

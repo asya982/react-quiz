@@ -1,4 +1,5 @@
 import { quizList } from "../helpers/constants/quizList";
+import i18n from "../i18n/config";
 import { AnswerType } from "../types/quiz";
 
 export const quizAPI = {
@@ -18,19 +19,44 @@ export const quizAPI = {
     for (let i = 0; i < quizList.length; i++) {
       localStorage.removeItem(`${quizList[i].id}`);
     }
+    localStorage.removeItem("email");
   },
 
   getUserAnswers: () => {
     const userData = [];
     for (let i = 0; i < quizList.length; i++) {
-      localStorage.getItem(`${quizList[i].id}`);
-      const question = quizList[i];
-      if (i < 3) {
-        userData.push(`${i + 1}`, question.question);
+      let answer = localStorage.getItem(`${quizList[i].id}`) || "";
+
+      if (quizList[i].type === "multiple-select") {
+        answer = answer
+          ?.split(", ")
+          .map((ans) => i18n.t(`answers.${ans}`))
+          .join(", ");
+      } else if (quizList[i].type === "bubble") {
+        answer = answer
+          .split(", ")
+          .map((ans) => i18n.t(`topic.${ans}`))
+          .join(", ");
+      } else {
+        answer = i18n.t(`answers.${answer}`);
       }
+
+      const question = quizList[i];
+      const questionText = i18n.t(`questions.${question.question}`);
+      userData.push({
+        order: `${quizList[i].id}`,
+        title: questionText,
+        type: question.type,
+        answer,
+      });
     }
 
-    userData.push(["6", "Email", "email", localStorage.getItem("email")]);
+    userData.push({
+      order: "6",
+      title: "Email",
+      type: "email",
+      answer: localStorage.getItem("email"),
+    });
     return userData;
   },
 };
