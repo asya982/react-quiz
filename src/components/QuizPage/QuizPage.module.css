@@ -48,12 +48,22 @@
     height: 250px;
 }
 
+
 .bubbleContainer div:nth-child(odd) {
-    transform: translateY(10px);
+    animation: bubbleSlideDownMore 1.7s infinite alternate;
+    animation-delay: 1s;
 }
 
-.bubbleContainer div:nth-child(even) {
-    transform: translateY(-10px);
+.bubbleContainer div:nth-child(2) {
+    animation: bubbleSlideDown 1.7s infinite alternate;
+    animation-delay: 1.5s;
+}
+
+.bubbleContainer div:nth-child(n+4) {
+    margin-left: 12vw;
+    margin-right: -15vw;
+    animation: bubbleSlideUp 1.7s infinite alternate;
+    animation-delay: 0.7s;
 }
 
 .backBtn {
@@ -69,3 +79,41 @@
 .progressContainer {
     position: relative;
 }
+
+@keyframes bubbleSlideDown {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes bubbleSlideUp {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bubbleSlideDownMore {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+}
+
+@media screen and (min-width:650px) {
+    .bubbleContainer div:nth-child(n+4) {
+        margin-left: 6vw;
+        margin-right: -6vw;
+    }
+  }
+  
