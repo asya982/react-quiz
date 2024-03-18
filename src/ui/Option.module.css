@@ -52,11 +52,19 @@ input[type="checkbox"] {
 
 .checkbox.checked::after {
     content: '✓';
-    font-size: 14px; /* Adjust font size as needed */
-    color: white; /* Adjust color as needed */
+    font-size: 14px;
+    color: white;
 }
 
 .optionContainer.checked {
     border-color: var(--accent);
     background-color: #E4229B33;
+}
+
+@media (hover:hover) and (pointer:fine) {
+    .optionContainer:hover {
+        background-color: white;
+        color: var(--accent);
+        border-color: var(--accent);
+    }
 }

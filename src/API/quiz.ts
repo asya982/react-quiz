@@ -1,4 +1,5 @@
 import { quizList } from "../helpers/constants/quizList";
+import { deleteTags } from "../helpers/formatString";
 import i18n from "../i18n/config";
 import { AnswerType } from "../types/quiz";
 
@@ -20,6 +21,7 @@ export const quizAPI = {
       localStorage.removeItem(`${quizList[i].id}`);
     }
     localStorage.removeItem("email");
+    i18n.changeLanguage("en");
   },
 
   getUserAnswers: () => {
@@ -42,7 +44,7 @@ export const quizAPI = {
       }
 
       const question = quizList[i];
-      const questionText = i18n.t(`questions.${question.question}`);
+      const questionText = deleteTags(i18n.t(`questions.${question.question}`));
       userData.push({
         order: `${quizList[i].id}`,
         title: questionText,

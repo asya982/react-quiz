@@ -5,6 +5,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .thankYou {
@@ -23,4 +24,10 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+@media (hover:hover) and (pointer:fine) {
+    .download:hover {
+        color: var(--accent);
+    }
 }
